@@ -4,7 +4,7 @@ import { Loader } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
-import { createCheckoutSessionFromCallback } from "./actions";
+import { createCheckoutSessionFromCallback, checkAuthStatus } from "./actions";
 
 const Page = () => {
 	const router = useRouter();
@@ -15,9 +15,10 @@ const Page = () => {
 		const doRedirect = async () => {
 			const productId = localStorage.getItem("productId");
 			const size = localStorage.getItem("productSize");
-
+			await checkAuthStatus()
 			if (!user || !productId || !size || checkingAuth) 
 			{
+				
 				router.push("/");
 
 			}

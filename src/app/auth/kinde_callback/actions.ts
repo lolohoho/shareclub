@@ -27,6 +27,9 @@ export async function checkAuthStatus() {
 			},
 		});
 	}
+	else{
+		console.log('found user')
+	}
 	console.log("end")
 
 	return { success: true };
