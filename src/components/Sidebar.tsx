@@ -1,17 +1,13 @@
 import Link from "next/link";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Shirt, Home, LayoutDashboard, User } from "lucide-react";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuLabel,
-	DropdownMenuSeparator,
-	DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
+import { Shirt, Home, LayoutDashboard, User, CreditCard } from "lucide-react";
+
 import { ModeToggle } from "./ModeToggle";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import LogoutButton from "./LogoutButton";
+import LoginButton from "./LoginButton";
+import RegisterButton from "./RegisterButton";
+
 import { getUserProfileAction } from "@/app/update-profile/actions";
 
 const SIDEBAR_LINKS = [
@@ -42,7 +38,7 @@ const Sidebar = async () => {
 		>
 			<Link href='/update-profile' className='max-w-fit'>
 				<Avatar className='mt-4 cursor-pointer'>
-					<AvatarImage src={userProfile?.image || "/user-placeholder.png"} className='object-cover' />
+					<AvatarImage src={user ? (userProfile?.image || "/user-placeholder.png") : "/user-placeholder.png"} className='object-cover' />
 					<AvatarFallback>CN</AvatarFallback>
 				</Avatar>
 			</Link>
@@ -58,7 +54,13 @@ const Sidebar = async () => {
 						<span className='hidden lg:block'>{link.label}</span>
 					</Link>
 				))}
-
+				
+				{!user && (
+					<>
+						<LoginButton />
+						<RegisterButton />
+					</>
+				)}
 				{isAdmin && (
 					<Link
 						href={"/secret-dashboard"}
@@ -68,8 +70,20 @@ const Sidebar = async () => {
 						<span className='hidden lg:block'>Dashboard</span>
 					</Link>
 				)}
+				{user && (
+					<>
+						<Link href={process.env.STRIPE_BILLING_PORTAL_LINK_DEV + "?prefilled_email=" + user?.email}
+							className='flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-bold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal'
 
-				<DropdownMenu>
+						>
+							<CreditCard className="w-6 h-6" />		<span className='hidden lg:block'>Billing</span>
+						</Link>
+
+						<LogoutButton />
+					</>
+				)}
+
+				{/* <DropdownMenu>
 					<div className='flex w-12 lg:w-full items-center gap-2 hover:bg-primary-foreground font-bold hover:text-primary px-2 py-1 rounded-full justify-center lg:justify-normal'>
 						<DropdownMenuTrigger className='flex items-center gap-2'>
 							<User className='w-6 h-6' />
@@ -85,7 +99,7 @@ const Sidebar = async () => {
 						</Link>
 						<LogoutButton />
 					</DropdownMenuContent>
-				</DropdownMenu>
+				</DropdownMenu> */}
 
 				<ModeToggle />
 			</nav>

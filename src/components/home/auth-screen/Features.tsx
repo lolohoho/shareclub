@@ -41,7 +41,7 @@ const Features = () => {
 	return (
 		<section className='container py-24 sm:py-32 space-y-8'>
 			<h2 className='text-3xl lg:text-4xl font-bold md:text-center'>
-				Many <UnderlinedText className='underline-offset-8'>OnlyHorse</UnderlinedText> Features 🐴
+				Many <UnderlinedText className='underline-offset-8'>ClubBotanicus</UnderlinedText> Features 🐴
 			</h2>
 
 			<div className='flex flex-wrap md:justify-center gap-4'>

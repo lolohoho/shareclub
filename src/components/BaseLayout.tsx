@@ -13,9 +13,9 @@ const BaseLayout = async ({
 }) => {
 	// any page that uses this layout requires authentication
 	const { isAuthenticated } = getKindeServerSession();
-	if (!(await isAuthenticated())) {
-		return redirect("/");
-	}
+	// if (!(await isAuthenticated())) {
+	// 	return redirect("/");
+	// }
 
 	return (
 		<div className='flex max-w-2xl lg:max-w-7xl mx-auto relative'>

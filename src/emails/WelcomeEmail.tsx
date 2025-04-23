@@ -18,7 +18,7 @@ const WelcomeEmail = ({
 	return (
 		<Html>
 			<Head />
-			<Preview>Welcome to OnlyHorse!</Preview>
+			<Preview>Welcome to ClubBotanicus!</Preview>
 			<Body style={main}>
 				<Container style={container}>
 					<Section style={message}>
@@ -31,7 +31,7 @@ const WelcomeEmail = ({
 							alt='welcome icon'
 							style={{ margin: "auto", borderRadius: 10 }}
 						/>
-						<Heading style={{ ...global.heading }}>Welcome to OnlyHorse!</Heading>
+						<Heading style={{ ...global.heading }}>Welcome to ClubBotanicus!</Heading>
 						<Text style={global.text}>Hello {userName},</Text>
 						<Text style={global.text}>
 							We're really happy to see you on our platform. We hope you have a great experience and enjoy
@@ -59,13 +59,13 @@ const WelcomeEmail = ({
 							Thanks for subscribing! We will see you in the platform. 🙂❤
 						</Text>
 						<Link href={BASE_URL} style={{ ...global.button, margin: "10px auto" }}>
-							Visit OnlyHorse
+							Visit ClubBotanicus
 						</Link>
 					</Section>
 					<Hr style={global.hr} />
 					<Section style={global.defaultPadding}>
 						<Text style={footer.text}>
-							© {new Date().getFullYear()} OnlyHorse, Inc. All Rights Reserved.
+							© {new Date().getFullYear()} ClubBotanicus, Inc. All Rights Reserved.
 						</Text>
 					</Section>
 				</Container>
@@ -175,7 +175,7 @@ const footer = {
 // 	return (
 // 		<Html>
 // 			<Head />
-// 			<Preview>Welcome to OnlyHorse!</Preview>
+// 			<Preview>Welcome to ClubBotanicus!</Preview>
 // 			<Body style={main}>
 // 				<Container style={container}>
 // 					<Section style={message}>
@@ -187,7 +187,7 @@ const footer = {
 // 							alt='welcome icon'
 // 							style={{ margin: "auto", borderRadius: 10 }}
 // 						/>
-// 						<Heading style={{ ...global.heading }}>Welcome to OnlyHorse!</Heading>
+// 						<Heading style={{ ...global.heading }}>Welcome to ClubBotanicus!</Heading>
 // 						<Text style={global.text}>Hello {userName},</Text>
 // 						<Text style={global.text}>
 // 							We're really happy to see you on our platform. We hope you have a great experience and enjoy
@@ -215,13 +215,13 @@ const footer = {
 // 							Thanks for subscribing! We will see you in the platform. 🙂❤
 // 						</Text>
 // 						<Link href={BASE_URL} style={{ ...global.button, margin: "10px auto" }}>
-// 							Visit OnlyHorse
+// 							Visit ClubBotanicus
 // 						</Link>
 // 					</Section>
 // 					<Hr style={global.hr} />
 // 					<Section style={global.defaultPadding}>
 // 						<Text style={footer.text}>
-// 							© {new Date().getFullYear()} OnlyHorse, Inc. All Rights Reserved.
+// 							© {new Date().getFullYear()} ClubBotanicus, Inc. All Rights Reserved.
 // 						</Text>
 // 					</Section>
 // 				</Container>

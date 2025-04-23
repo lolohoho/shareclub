@@ -5,21 +5,21 @@ const Footer = () => {
 				<p className='text-balance text-center text-sm leading-loose text-muted-foreground md:text-left'>
 					Built by{" "}
 					<a
-						href='https://twitter.com/shadcn'
+						href='https://www.laurentremond.com/'
 						target='_blank'
 						rel='noreferrer'
 						className='font-medium underline underline-offset-4'
 					>
-						you
+						Laurent Remond
 					</a>
-					. The source code is available on{" "}
+					. Order yours at {" "}
 					<a
-						href='https://github.com/shadcn-ui/ui'
+						href='https://appliq.fr/shareclub'
 						target='_blank'
 						rel='noreferrer'
 						className='font-medium underline underline-offset-4'
 					>
-						GitHub
+						appliq.fr/shareclub
 					</a>
 					.
 				</p>

@@ -10,9 +10,10 @@ import { Toaster } from "@/components/ui/toaster";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "OnlyHorse - E-commerce Store",
+	title: "Club Botanicus - Reseau social e-commerce",
 	description:
-		"OnlyHorse is a platform for horse lovers which includes a wide range of exclusive content and merchandise.",
+		// "ClubBotanicus is a platform for horse lovers which includes a wide range of exclusive content and merchandise.",
+		"Le Club Botanicus est pour tout ceux qui veulent apprendre à reconnaître et utiliser les plantes sauvages "
 };
 
 export default function RootLayout({

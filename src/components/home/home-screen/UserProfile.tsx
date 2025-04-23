@@ -45,9 +45,7 @@ const UserProfile = async () => {
 				<div className='flex flex-col mt-4'>
 					<p className='text-lg font-semibold'>{admin?.name}</p>
 					<p className='text-sm mt-2 md:text-md'>
-						Discover daily tips and tricks for horse health and care, along with insights into my personal
-						routine with my horses. Subscribe now to gain access to exclusive content and become part of the
-						community.
+					Bienvenue dans ce guide pratique dédié aux plantes sauvages comestibles de France. Vous cherchez à découvrir d’autres moyens de vous nourrir, tout en redécouvrant les saveurs de la nature ? Vous êtes au bon endroit ! Ce guide vous initie à la cueillette, une manière enrichissante de diversifier votre alimentation.
 					</p>
 				</div>
 			</div>

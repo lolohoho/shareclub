@@ -36,7 +36,7 @@ const CoverImage = async ({ adminName }: { adminName: string }) => {
 	return (
 		<div className='h-44 overflow-hidden relative'>
 			<Image
-				src={"/featured/featured10.jpg"}
+				src={"/featured/bota10.png"}
 				className='h-full w-full object-cover select-none pointer-events-none'
 				fill
 				alt='Horse Cover Image'

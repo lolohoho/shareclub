@@ -34,7 +34,7 @@ const Posts = ({ isSubscribed, admin }: { isSubscribed: boolean; admin: User }) 
 
 						<p className='text-center'>
 							Stay tuned for more posts from{" "}
-							<span className='text-primary font-semibold text-xl'>OnlyHorse.</span> You can subscribe to
+							<span className='text-primary font-semibold text-xl'>ClubBotanicus.</span> You can subscribe to
 							access exclusive content when it's available.
 						</p>
 					</div>

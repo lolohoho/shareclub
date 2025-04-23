@@ -100,7 +100,7 @@ export async function POST(req: Request) {
 
 							if (process.env.NODE_ENV !== "production") {
 								await resend.emails.send({
-									from: "OnlyHorse <onboarding@resend.dev>",
+									from: "ClubBotanicus <onboarding@resend.dev>",
 									to: [customerDetails.email],
 									subject: "Subscription Confirmation",
 									react: WelcomeEmail({
@@ -143,7 +143,7 @@ export async function POST(req: Request) {
 
 							if (process.env.NODE_ENV !== "production") {
 								await resend.emails.send({
-									from: "OnlyHorse <onboarding@resend.dev>",
+									from: "ClubBotanicus <onboarding@resend.dev>",
 									to: [customerDetails.email],
 									subject: "Order Confirmation",
 									react: ReceiptEmail({
@@ -191,7 +191,7 @@ export async function POST(req: Request) {
 				console.warn(`Unhandled event type: ${eventType}`);
 				break;
 		}
-	} catch (error) {}
+	} catch (error) { }
 
 	return NextResponse.json({});
 }

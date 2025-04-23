@@ -17,12 +17,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Input } from "@/components/ui/input";
 import Comment from "./Comment";
 
-// interface User {
-// 	id: string;
-// 	name:string;
-// 	image: string | null; 
-// 	// autres propriétés
-//   }
 type PostWithComments = Prisma.PostGetPayload<{
 	include: {
 		comments: {
@@ -37,14 +31,8 @@ type PostWithComments = Prisma.PostGetPayload<{
 const Post = ({ post, isSubscribed, admin }: { post: PostWithComments; isSubscribed: boolean; admin: User }) => {
 	const [isLiked, setIsLiked] = useState(false);
 	const [comment, setComment] = useState("");
-	// const { user } = useKindeBrowserClient();
-	// const [user, setUser] = useState(null);
-	const [user, setUser] = useState<User | null>(null);
-	useEffect(() => {
-		fetch("/api/user")
-			.then(res => res.json())
-			.then(data => setUser(data.user));
-	}, []);
+	const { user } = useKindeBrowserClient();
+
 	const { toast } = useToast();
 	const queryClient = useQueryClient();
 
@@ -113,7 +101,7 @@ const Post = ({ post, isSubscribed, admin }: { post: PostWithComments; isSubscri
 	};
 
 	useEffect(() => {
-		if (post.likesList &&  user?.id) setIsLiked(post.likesList.length > 0);
+		if (post.likesList && user?.id) setIsLiked(post.likesList.length > 0);
 	}, [post.likesList, user?.id]);
 
 	return (
